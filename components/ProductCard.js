@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
   const isNewProduct = timeDiffInMs >= threeDaysInMs ? false : true;
 
   return (
-    <a className="group">
+    <a className="group" key={product.id}>
       <div className="w-full bg-gray-200 rounded-3xl overflow-hidden relative cursor-pointer">
         <PrimaryImage
           primaryImgSrc={primaryImgSrc}

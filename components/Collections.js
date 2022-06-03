@@ -1,4 +1,5 @@
 import ProductCard from "./ProductCard";
+import uuid from "react-uuid";
 
 function Collections({ products }) {
   //using reduce to get the names of all the collections
@@ -8,18 +9,14 @@ function Collections({ products }) {
     allTypes[type].push(product);
     return allTypes;
   }, {});
-  console.log(types);
   //grabbing the names of the collections
-  Object.keys(types).forEach(function (key) {
-    var value = types[key];
-  });
   const collectionTitles = Object.keys(types);
 
   return (
     <div>
       {collectionTitles.map((item) => {
         return (
-          <div className="group">
+          <div className="group" key={uuid()}>
             <h2 className="text-4xl font-extrabold text-gray-900 my-12">
               {item}
             </h2>

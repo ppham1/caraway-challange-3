@@ -19,7 +19,7 @@ const ProductVariants = ({ product }) => {
             />
             <label
               className="border-black p-1 cursor-pointer z-100  rounded checked:bg-slate-500"
-              for={variantName.title}
+              htmlFor={variantName.title}
             >
               {variantName.title}
             </label>
