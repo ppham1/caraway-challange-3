@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-
+// changing the src of the image on hover
 const PrimaryImage = ({ primaryImgSrc, secondaryImgSrc }) => {
   const [isHovering, setIsHovered] = useState(false);
   const onMouseEnter = () => setIsHovered(true);
